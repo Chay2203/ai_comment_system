@@ -13,15 +13,8 @@ This project is a simple yet powerful comment page built with React. It features
 - **Edit/Delete Comments**: Admins have the ability to edit or delete comments, making it easy to manage user interactions.
 
 ## Screenshots
-
-### User Mode
-![Screenshot 2024-08-14 at 5 42 45 PM](https://github.com/user-attachments/assets/8175abc2-df30-4988-9fda-45238d47663a)
-
-
-### Admin Mode
 ![Screenshot 2024-08-14 at 5 57 29 PM](https://github.com/user-attachments/assets/71cf855d-cd56-4763-9ba6-dc5c3b64ebc9)
 ![Screenshot 2024-08-14 at 5 57 56 PM](https://github.com/user-attachments/assets/f57cc728-5b5d-47d1-9339-2f49496032e5)
-
 
 ### AI Reply Example
 ![gif](https://github.com/user-attachments/assets/e2f41ba2-e8be-4ef2-8b55-7c8e9476da7e)
