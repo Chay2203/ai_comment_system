@@ -44,6 +44,7 @@ const Comment = ({ comment, replies, onReply, onEdit, onDelete, onEditReply, onD
       {isAdmin && (
         <button onClick={() => setIsAdminReplying(!isAdminReplying)}>AI Reply</button>
       )}
+      <button onClick={() => onDelete(comment.id)}>Delete</button>
       {isReplying && <ReplyForm onSubmit={handleReply} onCancel={() => setIsReplying(false)} />}
       {isAdminReplying && (
         <AdminReplyForm
