@@ -24,27 +24,26 @@ const Comment = ({ comment, replies, onReply, onEdit, onDelete, onEditReply, onD
   };
 
   return (
-<div className="comment">
-  <h4>{comment.name}</h4>
-  <span>{formatDate(comment.date)}</span>
-  {isEditing ? (
-    <div className="edit-form">
-      <textarea value={editText} onChange={(e) => setEditText(e.target.value)} />
-      <button onClick={handleEdit}>Save</button>
-      <button onClick={() => setIsEditing(false)}>Cancel</button>
-    </div>
-  ) : (
-    <p>{comment.text}</p>
-  )}
-    <button onClick={() => setIsEditing(!isEditing)}>Edit</button>
-    <button onClick={() => onDelete(comment.id)} className="delete-button">
-      <i className="fa fa-trash"></i>
-    </button>
-  <button onClick={() => setIsReplying(!isReplying)}>Reply</button>
-  {isAdmin && (
-    <button onClick={() => setIsAdminReplying(!isAdminReplying)}>AI Reply</button>
-  )}
-      <button onClick={() => onDelete(comment.id)}>Delete</button>
+    <div className="comment">
+      <h4>{comment.name}</h4>
+      <span>{formatDate(comment.date)}</span>
+      {isEditing ? (
+        <div className="edit-form">
+          <textarea value={editText} onChange={(e) => setEditText(e.target.value)} />
+          <button onClick={handleEdit}>Save</button>
+          <button onClick={() => setIsEditing(false)}>Cancel</button>
+        </div>
+      ) : (
+        <p>{comment.text}</p>
+      )}
+      <button onClick={() => setIsEditing(!isEditing)}>Edit</button>
+      <button onClick={() => onDelete(comment.id)} className="delete-button">
+        <i className="fa fa-trash"></i>
+      </button>
+      <button onClick={() => setIsReplying(!isReplying)}>Reply</button>
+      {isAdmin && (
+        <button onClick={() => setIsAdminReplying(!isAdminReplying)}>AI Reply</button>
+      )}
       {isReplying && <ReplyForm onSubmit={handleReply} onCancel={() => setIsReplying(false)} />}
       {isAdminReplying && (
         <AdminReplyForm

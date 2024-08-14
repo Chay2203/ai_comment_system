@@ -14,8 +14,11 @@ const Reply = ({ reply, onEdit, onDelete }) => {
 
   return (
     <div className={`reply ${reply.isAI ? 'ai-reply' : ''}`}>
-      <span>{formatDate(reply.date)}</span>
-      {reply.isAI && <span className="ai-tag">(AI Generated)</span>}
+      <div className="reply-header">
+        <h5>{reply.name}</h5>
+        <span>{formatDate(reply.date)}</span>
+        {reply.isAI && <span className="ai-tag">(AI Generated)</span>}
+      </div>
       {isEditing ? (
         <div className="edit-form">
           <textarea value={editText} onChange={(e) => setEditText(e.target.value)} />
